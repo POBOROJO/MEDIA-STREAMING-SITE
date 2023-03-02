@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica,Arial,sans-serif;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image_cleanup.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: dodgerblue;
+    color: #fff;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor:pointer; 
+}
+
+select.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: black;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+    color: white;
+}
+
+.header-content {
+    position:absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%,-50);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup{
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button{
+    background: dodgerblue;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 46px;
+    padding: 70px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+    text-align: center;
+}
+@media screen and (min-width: 550px){
+    section{
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+}
+
+section.child{
+    border-bottom: 8px solid #222; 
+}
+
+section div.texts h1{
+    font-size: 1.625rem;
+    margin-bottom: 8px;
+    margin-left: 100px;
+}
+@media screen and (min-width: 550px){
+    section div.texts h1{
+        font-size: 3.125rem;
+    }
+}
+
+section div.texts p{
+    font-size: 1rem;
+    margin-left: 100px;
+}
+@media screen and (min-width: 550px){
+    section div.texts p{
+        font-size: 1.625rem;
+    }
+}
+
+.media{
+    position: relative; 
+}
+
+.media.s1 img{
+    width: 438px;
+}
+
+.media.s1 video{
+    width: 45%; 
+    position: absolute;
+    top :70px;
+    left: 60px;
+}
+@media screen and (min-width: 550px){
+    section:nth-child(odd) div.texts{
+        order: 3;
+    }
+}
+section div.download{
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 30px;
+    width: 325px;
+    left: 50%;
+    margin-left: -195px ;
+    background-color: #000;
+    gap: 15px;
+    grid-template-columns: max-content 1fr max-content;
+}
+
+section span.downloading{
+    color:dodgerblue;
+}
+
+section div.download img{
+    height: 75px;  /* 75 = 95 - 10 - 10 (padding)*/
+    width: auto;
+}
+
+.media.s3 img{
+    width: 438px;
+    position: relative;
+    z-index: 5;
+}
+
+.media.s3 video{
+    width: 40%; 
+    position: absolute;
+    top :35px;
+    left: 80px;
+}
+
+div.faq{
+    padding: 70px 30px;
+}
+div.faq h1{
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+@media screen and (min-width: 550px){
+    div.faq h1{
+        font-size: 3.125rem;
+    }
+}
+div.questions{
+    max-width: 635px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+@media screen and (min-width: 550px){
+    div.questions{
+        font-size: 1.625rem;
+    }
+}
+div.question{
+    position:relative;
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+div.question svg{
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 15px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+div.question .ask{
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+div.question div.ans{
+    padding:0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+div.question input[type="checkbox"]{
+    display: none;
+}
+div.question input[type="checkbox"]:checked ~ div.ans{
+    padding:30px 30px;
+    max-height: 600px;
+}
+
+/*------- media queries---------*/
+@media only screen and (max-width: 600px){
+    .logo{
+        height: 27 px;
+        width: 94px;
+    }
+    nav button,option{
+        padding: 9px 6px;
+
+    }
+    nav .language-btn{
+        padding: 6px 9px;
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h1{
+        font-size :30px;
+    }
+    .email-signup button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
