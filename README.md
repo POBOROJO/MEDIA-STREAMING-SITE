@@ -6,5 +6,3 @@ This includes many of the same design elements such as the, navigation menu,and 
 The layout is designed to be easy to navigate, with clear calls to action that prompt users to have a interactive user experience.
 
 [LINK](https://poborojo.github.io/MOVIE-SITE/)
-
-NOTE- IF IT SHOWS dangerous site or something do not worry it is safe.
