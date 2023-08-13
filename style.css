@@ -1,4 +1,5 @@
-*{
+*{  
+    outline:2px solid hotpink;
     margin: 0;
     padding: 0;
     font-family: 'Helvetica Neue', Helvetica,Arial,sans-serif;
@@ -19,7 +20,7 @@ body{
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(images/header-image_cleanup.png);
     background-size: cover;
     background-position: center;
-    padding: 10px 8%;
+    padding: 0.62rem 8%;
     position: relative;
 }
 
@@ -27,13 +28,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 0.62rem 0;
 }
 
 .logo{
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 150px;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+    width: 9.3rem;
     cursor: pointer;
 }
 
@@ -42,10 +43,10 @@ nav button{
     outline: 0;
     background: dodgerblue;
     color: #fff;
-    padding: 7px 20px;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-left: 10px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    margin-left: 0.62rem;
     cursor:pointer; 
 }
 
@@ -54,7 +55,7 @@ select.language-btn{
     align-items: center;
     background: black;
     border: 1px solid #fff;
-    padding: 7px 10px;
+    padding: 0.5rem 0.62rem;
     color: white;
 }
 
@@ -64,11 +65,11 @@ select.language-btn{
     left: 30%;
     transform: translate(-50%,-50);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 6.25rem;
 }
 
 .header-content h1{
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 70px;
     font-weight: 600;
     max-width: 650px;
@@ -76,12 +77,12 @@ select.language-btn{
 
 .header-content h3{
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .email-signup{
     background: #fff;
-    border-radius: 10px;
+    border-radius: 0.62rem;
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -92,7 +93,7 @@ select.language-btn{
     flex: 1;
     border: 0;
     outline: 0;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 
 .email-signup button{
@@ -113,11 +114,13 @@ section{
     align-items: center;
     border-top: 8px solid #222;
     text-align: center;
+    justify-content: center;
 }
+
 @media screen and (min-width: 550px){
     section{
         grid-template-columns: 1fr 1fr;
-        text-align: left;
+        /* text-align: left; */
     }
 }
 
@@ -125,10 +128,15 @@ section.child{
     border-bottom: 8px solid #222; 
 }
 
-section div.texts h1{
+section .text{
+    display: flex;
+    justify-content: center;
+}
+
+section .texts h1{
     font-size: 1.625rem;
     margin-bottom: 8px;
-    margin-left: 100px;
+    margin-left: 6.25rem;
 }
 @media screen and (min-width: 550px){
     section div.texts h1{
@@ -138,7 +146,7 @@ section div.texts h1{
 
 section div.texts p{
     font-size: 1rem;
-    margin-left: 100px;
+    margin-left: 6.25rem;
 }
 @media screen and (min-width: 550px){
     section div.texts p{
@@ -150,16 +158,36 @@ section div.texts p{
     position: relative; 
 }
 
+.stranger img{
+    width: 100%;
+}
+
+.stranger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .media.s1 img{
-    width: 438px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
 }
 
 .media.s1 video{
-    width: 45%; 
+    width: 100%; 
     position: absolute;
-    top :70px;
-    left: 60px;
+    /* top :70px; */
+    /* left: 3.5rem; */
 }
+
 @media screen and (min-width: 550px){
     section:nth-child(odd) div.texts{
         order: 3;
@@ -168,16 +196,16 @@ section div.texts p{
 section div.download{
     border: 2px solid #666;
     border-radius: 15px;
-    padding: 10px;
-    height: 95px;
+    padding: 0.62rem;
+    /* height: 95px; */
     display: grid;
     text-align: center;
     align-items: center;
-    position: absolute;
-    bottom: 30px;
-    width: 325px;
-    left: 50%;
-    margin-left: -195px ;
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* width: 325px; */
+    /* left: 50%; */
+    /* margin-left: -195px ; */
     background-color: #000;
     gap: 15px;
     grid-template-columns: max-content 1fr max-content;
@@ -188,21 +216,32 @@ section span.downloading{
 }
 
 section div.download img{
-    height: 75px;  /* 75 = 95 - 10 - 10 (padding)*/
-    width: auto;
+    /* height: 100%;  */
+    width: 3rem;
+}
+
+.scared_games{
+    display: flex;
+    justify-content: center;
+}
+
+.s3{
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .media.s3 img{
-    width: 438px;
-    position: relative;
+    width: 100%;
+    /* position: absolute; */
     z-index: 5;
 }
 
 .media.s3 video{
-    width: 40%; 
+    width: 62%; 
     position: absolute;
-    top :35px;
-    left: 80px;
+    top :11%;
+    left: 19%;
 }
 
 div.faq{
@@ -231,7 +270,7 @@ div.questions{
 div.question{
     position:relative;
     background-color: #303030;
-    margin-bottom: 10px;
+    margin-bottom: 0.62rem;
 }
 div.question svg{
     width: 30px;
@@ -243,7 +282,7 @@ div.question svg{
 }
 div.question .ask{
     display: block;
-    padding: 20px 30px;
+    padding: 1.25rem 30px;
     border-bottom: 1px solid #000;
     cursor: pointer;
 }
@@ -277,13 +316,19 @@ div.question input[type="checkbox"]:checked ~ div.ans{
     .header-content{
         position: unset;
         transform: none;
-        padding-top: 150px;
+        padding-top: 9.3rem;
     }
     .header-content h1{
         font-size :30px;
     }
     .email-signup button{
-        font-size: 12px;
-        padding: 10px 15px;
+        font-size: 0.75rem;
+        padding: 0.62rem 15px;
+    }
+    
+    @media (width < 500px){
+        section{
+            flex-direction: column;
+        }
     }
 }
